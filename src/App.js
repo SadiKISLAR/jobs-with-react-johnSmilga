@@ -37,7 +37,16 @@ function App() {
         <div className="underline"></div>
       </div>
       <div className="jobs-center"></div>
-      {/*button */}
+      {/*button container */}
+      <div className="btn-container">
+        {
+          jobs.map((item, index) => {
+            return <button>
+              {item.company}
+            </button>
+          })
+        }
+      </div>
       {/*job info */}
       <article className='job-info'>
         <h3>{title}</h3>
