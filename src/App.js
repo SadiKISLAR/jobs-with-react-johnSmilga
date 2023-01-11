@@ -14,16 +14,25 @@ function App() {
     setJobs(newJobs);
     setLoading(false);
 
-  }
+  };
 
   useEffect(() => {
     fetchJobs();
-  }, [])
+  }, []);
+
+  if (loading) {
+    return (
+      <section className='section loading'>
+        <h1>loading...</h1>
+      </section>
+    );
+  }
+  const { company, dates, duties, title } = jobs[value]
 
 
-
-
-  return <h2>tabs project setup</h2>
+  return <section className='section'>
+    <div className="title">
+    </div></section>
 }
 
 export default App
